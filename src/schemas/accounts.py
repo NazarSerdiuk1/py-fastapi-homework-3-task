@@ -18,7 +18,7 @@ class UserRegistrationRequestSchema(BaseModel):
 
     @field_validator("password")
     @classmethod
-    def validation_password(cls, password: str):
+    def validate_password(cls, password: str):
         return accounts_validators.validate_password_strength(password)
 
 
